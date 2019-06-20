@@ -32,6 +32,10 @@ job('NodeJS Docker example') {
         nodejs('nodejs-new') 
     }
     steps {
+        shell ("echo unit test")
+        shell ("echo sonarqube")
+        shell ("echo ineration test")
+        shell (npm install)
         dockerBuildAndPublish {
             repositoryName('karenbarlev/docker-cicd')
             tag('${GIT_REVISION,length=9}')
