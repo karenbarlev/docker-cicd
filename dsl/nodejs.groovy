@@ -14,6 +14,7 @@ job('NodeJS example') {
     }
     steps {
         shell("npm install")
+        shell ("echo "build --prod --base-href /project name/"")
     }
 }
 
