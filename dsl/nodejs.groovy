@@ -37,7 +37,7 @@ job('NodeJS Docker example') {
         shell ("echo ineration test")
         shell ("npm install")
         dockerBuildAndPublish {
-            repositoryName('karenbarlev/docker-cicd')
+            repositoryName('karenbarlev75/docker-cicd')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
